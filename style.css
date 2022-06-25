@@ -1,0 +1,95 @@
+:root {
+  --bgColor: #f8f8f8;
+  --brown-like: #707070;
+  --blue: #1792d2;
+  --deep-blue: #143774;
+  --font-fam: "Ubuntu", sans-serif;
+  --font: 1rem;
+  --fw: bold;
+}
+
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-fam);
+}
+/* ############################
+    Typography
+   ############################### 
+*/
+h1 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: var(--deep-blue);
+  font-size: 3rem;
+  margin: 0;
+}
+.subtitle {
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+  font-size: 0.75rem;
+}
+
+header {
+  /* text-align: center; */
+  background-color: var(--bgColor);
+  padding: 2em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+nav li {
+  margin-left:  2em;
+}
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brown-like);
+}
+nav a:hover,
+nav a:focus {
+  color: var(--blue);
+}
+.current-page{
+    border-bottom: 2px solid var(--brown-like);
+}
+.current-page:hover{
+    color: var(--blue);
+}
+
+
+@media (max-width:675px) {
+    h1{
+        font-size: 2rem;
+    }
+    .subtitle{
+        
+        text-align: center;
+    }
+
+    .container-nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav li{
+        margin-top: 2em;
+    }
+}
