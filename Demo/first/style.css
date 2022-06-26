@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.big-container{
+    max-width: 960px; 
+    margin: 0 auto;
+    
+}
+
+
+header{
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.heading{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.heading span{
+    color: purple;
+}
+.banner{
+    height: 10rem;
+    margin: 0 .75rem;
+}
+.banner img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.first-container{
+    height: 40rem;
+    margin: .5em 0;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    background-color: rgba(161, 56, 96, 0.692);
+}
+/* divs */
+
+.first{
+    width: 25%;
+    padding: 0 .8rem;
+}
+.divs h2{
+    margin: 2rem 0;
+    color: rgb(50, 7, 7);
+}
+.divs p{
+    color: rgba(50, 7, 7, 0.726);
+    line-height: 1.2rem;
+}
+.down{
+    margin-top: 2rem;
+}
+
+
+.second{
+    flex: 2;
+    width: 50%;
+}
+.third{
+    flex: 1;
+    width: 25%;
+    background-color: rgb(50, 7, 7);
+    padding: 1.5rem;
+}
+
+.third p{
+    color: rgb(231, 89, 143);
+}
+
+
+
+.second-container{
+    height: 20rem;
+    margin: .5em 0;
+    display: flex;
+}
+.st{
+    width: 75%;
+    background-color: rgba(161, 56, 96, 0.692);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.nd{
+    width: 25%;
+    padding: 1.5rem;
+    background-color: rgb(50, 7, 7);
+    text-overflow: ellipsis;
+}
+.nd p{
+    color: rgb(231, 89, 143);
+    text-overflow: ellipsis;
+}
+
+@media (max-width:600px) {
+    .cons{
+        flex-direction: column;
+    }
+    .divs{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .heading{
+        font-size: 1.2rem;
+    }
+}

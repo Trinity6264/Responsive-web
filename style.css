@@ -1,95 +1,94 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body{
-    /* min-width: 600px; */
-    /* max-width: 960px; */
+:root {
+  --bgColor: #f8f8f8;
+  --brown-like: #707070;
+  --blue: #1792d2;
+  --deep-blue: #143774;
+  --font-fam: "Ubuntu", sans-serif;
+
 }
 
-
-header{
-    padding: 2rem 1rem;
-    text-align: center;
+.container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
-.heading{
-    font-size: 2.5rem;
-    font-weight: 600;
-}
-
-.heading span{
-    color: purple;
-}
-.banner{
-    height: 10rem;
-    margin: 0 .75rem;
-}
-.banner img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.first-container{
-    height: 40rem;
-    margin: .5em 0;
+.container-nav{
     display: flex;
-    justify-content: start;
-    background-color: rgba(161, 56, 96, 0.692);
-}
-/* divs */
-
-.first{
-    flex: 1;
-    padding: 0 .8rem;
-}
-.divs h2{
-    margin: 2rem 0;
-    color: rgb(50, 7, 7);
-}
-.divs p{
-    color: rgba(50, 7, 7, 0.726);
-    line-height: 1.7rem;
-}
-.down{
-    margin-top: 2rem;
+    justify-content: space-between;
 }
 
+body {
+  margin: 0;
+  font-family: var(--font-fam);
+}
+/* ############################
+    Typography
+   ############################### 
+*/
+h1 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+  color: var(--deep-blue);
+  font-size: 3rem;
+  margin: 0;
+}
+.subtitle {
+  font-weight: 700;
+  color: var(--blue);
+  margin: 0;
+  font-size: 0.75rem;
+}
 
-.second{
-    flex: 2;
-}
-.third{
-    flex: 1;
-    background-color: rgb(50, 7, 7);
-    padding: 1.5rem;
+header {
+  /* text-align: center; */
+  background-color: var(--bgColor);
+  padding: 2em;
 }
 
-.third p{
-    color: rgb(231, 89, 143);
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+nav li {
+  margin-left:  2em;
+}
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brown-like);
+}
+nav a:hover,
+nav a:focus {
+  color: var(--blue);
+}
+.current-page{
+    border-bottom: 2px solid var(--brown-like);
+}
+.current-page:hover{
+    color: var(--blue);
 }
 
 
+@media (max-width:675px) {
+    h1{
+        font-size: 2rem;
+    }
+    .subtitle{
+        
+        text-align: center;
+    }
 
-.second-container{
-    height: 20rem;
-    margin: .5em 0;
-    display: flex;
-}
-.st{
-    flex: 3;
-    background-color: rgba(161, 56, 96, 0.692);
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.nd{
-    flex: 1;
-    padding: 1.5rem;
-    background-color: rgb(50, 7, 7);
-    text-overflow: ellipsis;
-}
-.nd p{
-    color: rgb(231, 89, 143);
-    text-overflow: ellipsis;
+    .container-nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav li{
+        margin-top: 2em;
+    }
 }
